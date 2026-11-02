@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Alex XU</title>
+<meta name="description" content="Contacter Alex XU : stage de 5 semaines du 9 novembre au 18 décembre 2026, Paris et Île-de-France, télétravail possible. Formulaire, e-mail, LinkedIn et GitHub.">
+<meta property="og:title" content="Contact — Alex XU">
+<meta property="og:description" content="Contacter Alex XU : stage de 5 semaines du 9 novembre au 18 décembre 2026, Paris et Île-de-France, télétravail possible. Formulaire, e-mail, LinkedIn et GitHub.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0E0E10">
+<link rel="alternate" hreflang="fr" href="contact.html">
+<link rel="alternate" hreflang="en" href="en/contact.html">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t)d.setAttribute('data-theme',t)}catch(e){}})()</script>
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div class="progress" id="progress"></div>
+<!-- #header -->
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <nav class="navpill" id="nav" aria-label="Navigation principale">
+      <!-- Logo : pour mettre une image, renseigner logoImage dans assets/js/config.js (aucune page à modifier) -->
+      <a class="logo" href="index.html" aria-label="Alex XU — accueil"><span class="logo-txt">AX</span></a>
+      <a class="nl" href="index.html">Accueil</a>
+      <a class="nl" href="profil.html">Profil</a>
+      <a class="nl" href="competences.html">Compétences</a>
+      <a class="nl" href="stage.html">Stage</a>
+      <a class="nl" href="projets.html">Projets</a>
+      <a class="nl" href="veille.html">Veille</a>
+      <a class="nl" href="certifications.html">Certifications</a>
+    </nav>
+    <div class="hdr-right">
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <a class="icon-btn" id="lang" href="en/contact.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+      <button class="icon-btn" id="theme" type="button" aria-label="Basculer entre thème clair et sombre">
+        <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
+      </button>
+      <a class="btn btn-main cta-top" href="contact.html" aria-current="page">Contact
+        <span class="cir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+    </div>
+  </div>
+</header>
+<!-- /#header -->
+
+<main id="main">
+
+<section class="pagehead wrap" id="top">
+  <h1 class="rv">Un stage à proposer ?<br><span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">Parlons-en</span>.</h1>
+  <p class="lead rv">Je cherche un stage de 5 semaines du 9 novembre au 18 décembre 2026, à Paris ou en Île-de-France. Écrivez-moi, je réponds dès que possible.</p>
+</section>
+
+<section class="sec wrap sec-tight">
+  <div class="split">
+    <div class="card rv">
+      <form class="form" id="form-contact" data-endpoint="https://formspree.io/f/xzeegqgv" novalidate>
+        <div class="hp" aria-hidden="true"><label>Ne pas remplir <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+        <div class="field">
+          <label for="nom">Nom</label>
+          <input id="nom" name="nom" type="text" autocomplete="name" placeholder="Votre nom" required>
+          <span class="field-err" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="email">Adresse e-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.fr" required>
+          <span class="field-err" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="objet">Objet</label>
+          <select id="objet" name="objet" required>
+            <option>Proposition de stage</option>
+            <option>Question sur mon parcours</option>
+            <option>Autre</option>
+          </select>
+          <span class="field-err" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Bonjour Alex, …" required></textarea>
+          <span class="field-err" role="alert"></span>
+        </div>
+        <div class="field">
+          <label class="check"><input type="checkbox" name="consentement" value="oui" required><span>J'accepte que ces informations soient utilisées pour me répondre (voir les <a class="link" href="mentions-legales.html">mentions légales</a>).</span></label>
+          <span class="field-err" role="alert"></span>
+        </div>
+        <div><button class="btn btn-main" type="submit"><span class="libelle">Envoyer le message</span><span class="cir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></button></div>
+        <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="rv">
+      <ul class="contact-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="M3 7l9 7 9-7"/></svg><div><small>E-mail</small><a href="mailto:xualex300@gmail.com">xualex300@gmail.com</a></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h4v11H4zM6 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM10 9h4v2c.8-1.4 2.2-2.2 4-2.2 3 0 4 2 4 5V20h-4v-5.5c0-1.4-.5-2.2-1.7-2.2S14 13.2 14 14.6V20h-4z"/></svg><div><small>LinkedIn</small><a href="https://www.linkedin.com/in/alex-xu-2ba47239a/" target="_blank" rel="noopener noreferrer">linkedin.com/in/alex-xu-2ba47239a</a></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="9" r="2.5"/><path d="M6 8.5v7M18 11.5c0 4-6 2-11.5 5"/></svg><div><small>GitHub</small><a href="https://github.com/Awerox" target="_blank" rel="noopener noreferrer">github.com/Awerox</a></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><small>Localisation</small>Ivry-sur-Seine · Paris et Île-de-France, télétravail possible</div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><div><small>Disponibilité</small>Stage de 5 semaines · 9 nov. → 18 déc. 2026</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- #footer -->
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-in">
+      <div>
+        <span class="ft-name">Alex XU</span>
+        <p style="color:var(--sec);margin-top:8px;font-size:15.5px">BTS SIO option SLAM — ENC Bessières<br>Ivry-sur-Seine, Île-de-France</p>
+      </div>
+      <nav aria-label="Pages du site">
+        <a href="profil.html">Profil</a>
+        <a href="competences.html">Compétences</a>
+        <a href="stage.html">Stage</a>
+        <a href="projets.html">Projets</a>
+        <a href="veille.html">Veille</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <nav aria-label="Liens externes">
+        <a href="https://www.linkedin.com/in/alex-xu-2ba47239a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Awerox" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="mailto:xualex300@gmail.com">E-mail</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+    <div class="ft-bot">
+      <span>Dernière mise à jour : octobre 2026 — site écrit à la main en HTML, CSS et JavaScript, hébergé sur GitHub Pages</span>
+      <nav aria-label="Pages annexes">
+        <a href="mentions-legales.html">Mentions légales</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<!-- /#footer -->
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

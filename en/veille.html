@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Technology watch — Alex XU</title>
+<meta name="description" content="Alex XU's technology watch: generative AI in software development. Productivity gains, code quality and security, responsible use, with key figures and dated sources.">
+<meta property="og:title" content="Technology watch — Alex XU">
+<meta property="og:description" content="Alex XU's technology watch: generative AI in software development. Productivity gains, code quality and security, responsible use, with key figures and dated sources.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0E0E10">
+<link rel="alternate" hreflang="fr" href="../veille.html">
+<link rel="alternate" hreflang="en" href="veille.html">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t)d.setAttribute('data-theme',t)}catch(e){}})()</script>
+<link rel="preload" href="../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+<!-- #header -->
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <nav class="navpill" id="nav" aria-label="Main navigation">
+      <!-- Logo : pour mettre une image, renseigner logoImage dans assets/js/config.js (aucune page à modifier) -->
+      <a class="logo" href="index.html" aria-label="Alex XU — home"><span class="logo-txt">AX</span></a>
+      <a class="nl" href="index.html">Home</a>
+      <a class="nl" href="profil.html">Profile</a>
+      <a class="nl" href="competences.html">Skills</a>
+      <a class="nl" href="stage.html">Internship</a>
+      <a class="nl" href="projets.html">Projects</a>
+      <a class="nl" href="veille.html" aria-current="page">Tech watch</a>
+      <a class="nl" href="certifications.html">Certifications</a>
+    </nav>
+    <div class="hdr-right">
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Open the menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <a class="icon-btn" id="lang" href="../veille.html" hreflang="fr" lang="fr" aria-label="Passer en français">FR</a>
+      <button class="icon-btn" id="theme" type="button" aria-label="Switch between light and dark theme">
+        <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
+      </button>
+      <a class="btn btn-main cta-top" href="contact.html">Contact
+        <span class="cir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+    </div>
+  </div>
+</header>
+<!-- /#header -->
+
+<main id="main">
+
+<section class="pagehead wrap" id="top">
+  <h1 class="rv">Generative AI in software development:<br><span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">real gain</span> or illusion?</h1>
+  <p class="lead rv">Coding assistants built on generative AI are now part of many developers' daily work. This watch follows what they really bring, what they may degrade (quality, security) and the framework in which to use them. It is directly tied to my future job.</p>
+</section>
+
+<section class="sec wrap sec-tight" id="chiffres">
+  <div class="sec-head rv">
+    <span class="mono eyebrow">Key figures</span>
+    <h2 style="font-size:clamp(26px,3.4vw,40px)">What surveys and studies say</h2>
+  </div>
+  <div class="figs">
+    <div class="fig rv"><b>65.9%</b><p>of surveyed developers say they use coding assistants or AI agents (Stack Overflow Developer Survey 2026, 30,000+ responses, 169 countries).</p><a href="https://itbrief.co.uk/story/stack-overflow-survey-finds-developers-wary-of-ai-tools" target="_blank" rel="noopener noreferrer">Source: IT Brief, 6 Oct 2026 ↗</a></div>
+    <div class="fig rv"><b>+19%</b><p>more time to finish their tasks with AI, for 16 experienced developers (246 real tasks), whereas they expected −24% (METR study, 2025).</p><a href="https://techcrunch.com/2025/07/11/ai-coding-tools-may-not-speed-up-every-developer-study-shows" target="_blank" rel="noopener noreferrer">Source: TechCrunch, 11 Jul 2025 ↗</a></div>
+    <div class="fig rv"><b>≈ 44%</b><p>of security tests failed on average by the 11 models in Veracode's summer 2026 leaderboard: the code compiles (≈ 100%) but is not always safe.</p><a href="https://sdtimes.com/agentic-security/veracode-finds-ai-generated-code-security-has-barely-improved-since-last-year/" target="_blank" rel="noopener noreferrer">Source: SD Times, 28 Jul 2026 ↗</a></div>
+    <div class="fig rv"><b>6.6%</b><p>of developers would trust AI with an important decision (Stack Overflow Developer Survey 2026).</p><a href="https://itbrief.co.uk/story/stack-overflow-survey-finds-developers-wary-of-ai-tools" target="_blank" rel="noopener noreferrer">Source: IT Brief, 6 Oct 2026 ↗</a></div>
+  </div>
+</section>
+
+<section class="sec wrap sec-tight" id="axes">
+  <div class="sec-head rv">
+    <span class="mono eyebrow">Three themes</span>
+    <h2 style="font-size:clamp(26px,3.4vw,40px)">Productivity, quality, framework</h2>
+  </div>
+  <div class="grid-3">
+    <article class="card rv axe">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+      <span class="mono" style="color:var(--accent)">Theme 01</span>
+      <h3>Productivity gains: perceived or measured?</h3>
+      <p>The DORA 2025 report (nearly 5,000 professionals) says more than 80% believe AI has increased their productivity. Yet the METR study on real tasks by experienced developers measured the opposite: 19% more time, while they expected to save 24%. The study dates from 2025 and covers the tools of the time: the gain depends on context, experience and tools.</p>
+    </article>
+    <article class="card rv axe">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 4.4-3.4 7.9-8 9-4.6-1.1-8-4.6-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      <span class="mono" style="color:var(--accent)">Theme 02</span>
+      <h3>Quality and security of generated code</h3>
+      <p>According to Veracode's summer 2026 leaderboard (11 models; 100+ tracked since the programme began), models pass 56% of security tests on average, almost unchanged from a year ago: Python reaches 63%, Java only 30%. These tests cover raw models, with no human review or guardrails. DORA describes AI as an amplifier: it strengthens an organisation's strengths but also its weaknesses, and delivery instability keeps rising.</p>
+    </article>
+    <article class="card rv axe">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/><path d="M9 8h5"/></svg></span>
+      <span class="mono" style="color:var(--accent)">Theme 03</span>
+      <h3>Responsible use and legal framework</h3>
+      <p>In the 2026 Stack Overflow survey, 78.7% say source attribution matters and only 24% say their employer has approved tools or an official policy. On the legal side, the CNIL published its recommendations in July 2025 for developing GDPR-compliant AI systems, noting that the GDPR applies in many cases to models trained on personal data. A habit worth keeping: never paste API keys or personal data into an assistant.</p>
+    </article>
+  </div>
+</section>
+
+<section class="sec band" id="retenir">
+  <div class="wrap split">
+    <div class="rv">
+      <span class="mono eyebrow">My takeaways</span>
+      <h2 style="font-size:clamp(28px,3.6vw,44px)">AI speeds up writing, not responsibility.</h2>
+    </div>
+    <div class="rv">
+      <ul class="mlist">
+        <li><b>Review, test, understand.</b> Generated code is checked before it is shipped, especially for security.</li>
+        <li><b>Measure rather than believe.</b> Perceived productivity is no substitute for measurement.</li>
+        <li><b>Keep the fundamentals.</b> For a student, the assistant must not replace learning: without the fundamentals, it is impossible to judge what it suggests.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap" id="sources">
+  <div class="sec-head rv">
+    <span class="mono eyebrow">Sources</span>
+    <h2 style="font-size:clamp(26px,3.4vw,40px)">Sources consulted</h2>
+    <p class="lead">Dates are the publication dates of the articles. Figures are quoted as published.</p>
+  </div>
+  <div class="src">
+    <div class="src-item rv"><time>6 Oct 2026</time><div><b><a href="https://itbrief.co.uk/story/stack-overflow-survey-finds-developers-wary-of-ai-tools" target="_blank" rel="noopener noreferrer">Stack Overflow survey finds developers wary of AI tools</a></b><p>IT Brief — summary of Stack Overflow's 2026 Developer Survey: AI usage and trust.</p></div></div>
+    <div class="src-item rv"><time>28 Jul 2026</time><div><b><a href="https://sdtimes.com/agentic-security/veracode-finds-ai-generated-code-security-has-barely-improved-since-last-year/" target="_blank" rel="noopener noreferrer">Veracode finds AI-generated code security has barely improved since last year</a></b><p>SD Times — Veracode report on the security of AI-generated code: summer 2026 leaderboard, 11 models.</p></div></div>
+    <div class="src-item rv"><time>29 Sep 2025</time><div><b><a href="https://www.infoq.com/news/2025/09/dora-state-of-ai-in-dev-2025" target="_blank" rel="noopener noreferrer">DORA State of AI in Dev 2025</a></b><p>InfoQ — DORA report on AI-assisted development: perceived productivity and stability.</p></div></div>
+    <div class="src-item rv"><time>22 Jul 2025</time><div><b><a href="https://cnil.fr/fr/ia-finalisation-recommandations-developpement-des-systemes-ia" target="_blank" rel="noopener noreferrer">IA : la CNIL finalise ses recommandations sur le développement des systèmes d'IA</a></b><p>CNIL — recommendations for reconciling AI development with the GDPR.</p></div></div>
+    <div class="src-item rv"><time>11 Jul 2025</time><div><b><a href="https://techcrunch.com/2025/07/11/ai-coding-tools-may-not-speed-up-every-developer-study-shows" target="_blank" rel="noopener noreferrer">AI coding tools may not speed up every developer, study shows</a></b><p>TechCrunch — presentation of the METR study. Original paper: <a href="https://arxiv.org/abs/2507.09089" target="_blank" rel="noopener noreferrer">arXiv 2507.09089</a>.</p></div></div>
+  </div>
+</section>
+
+</main>
+
+<!-- #footer -->
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-in">
+      <div>
+        <span class="ft-name">Alex XU</span>
+        <p style="color:var(--sec);margin-top:8px;font-size:15.5px">BTS SIO (SLAM option) — ENC Bessières<br>Ivry-sur-Seine, Île-de-France</p>
+      </div>
+      <nav aria-label="Site pages">
+        <a href="profil.html">Profile</a>
+        <a href="competences.html">Skills</a>
+        <a href="stage.html">Internship</a>
+        <a href="projets.html">Projects</a>
+        <a href="veille.html">Tech watch</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <nav aria-label="External links">
+        <a href="https://www.linkedin.com/in/alex-xu-2ba47239a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Awerox" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="mailto:xualex300@gmail.com">Email</a>
+        <a href="../cv.html">CV</a>
+      </nav>
+    </div>
+    <div class="ft-bot">
+      <span>Last updated: October 2026 — hand-written in HTML, CSS and JavaScript, hosted on GitHub Pages</span>
+      <nav aria-label="Legal pages">
+        <a href="mentions-legales.html">Legal notice</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<!-- /#footer -->
+
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
