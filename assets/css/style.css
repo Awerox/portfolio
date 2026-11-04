@@ -142,6 +142,7 @@ sup{font-size:.62em;line-height:0}
 .sec.band>.wrap>.sec-head~*{margin-top:clamp(20px,2.4vw,32px)}
 
 /* bandeau ambre : « recherche de stage » */
+.sec.band.hl{border-top:3px solid var(--accent)}
 .sec.alt{display:block;background:var(--fill);color:var(--on-fill);border-top:0}
 .sec.alt::before{content:none}
 .alt-in{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px 48px}
