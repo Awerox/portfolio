@@ -557,47 +557,44 @@ sup{font-size:.62em;line-height:0}
 .srcgrid>.srcc:last-child:nth-child(odd){grid-column:1/-1}
 
 /* ============================================================
-   16. PAGE CERTIFICATIONS : cartes avec aperçu des attestations
+   16. PAGE CERTIFICATIONS : liste éditoriale, aperçu au survol
    ============================================================ */
-.ccards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
-.cc{display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--line-strong);border-radius:16px;background:var(--bg2);transition:transform .35s var(--ease),border-color .25s}
-.cc:hover{transform:translateY(-4px);border-color:var(--accent)}
-.cc-media{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:#fff;color:inherit;text-decoration:none}
-.cc-media img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:transform .6s var(--ease)}
-.cc:hover .cc-media img{transform:scale(1.05)}
-.cc-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(14,14,16,.55));pointer-events:none}
-.cc-media.stack{background:var(--bg2);padding:14px 22px 0 14px}
-.cc-media.stack img{position:relative;z-index:2;border-radius:6px 6px 0 0;box-shadow:0 6px 18px rgba(0,0,0,.35)}
-.cc-media.stack::before{content:"";position:absolute;z-index:1;top:6px;left:24px;right:10px;bottom:0;border-radius:6px 6px 0 0;background:#e9e7e2;box-shadow:8px -6px 0 -1px #d6d3cc}
-.cc-dl{position:absolute;z-index:3;right:12px;bottom:12px;display:inline-flex;align-items:center;padding:7px 14px;border-radius:999px;background:var(--fill);color:var(--on-fill);font-weight:700;font-size:15px;box-shadow:0 4px 14px rgba(0,0,0,.3);transition:transform .25s var(--ease)}
-.cc-media:hover .cc-dl,.cc-media:focus-visible .cc-dl{transform:translateY(-3px)}
-.cc-media.gfx{display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 90% at 20% 10%,color-mix(in srgb,var(--accent) 22%,var(--bg2)),var(--bg) 70%)}
-.cc-media.gfx::after{display:none}
-.gfx-t{font:800 clamp(56px,7vw,96px)/1 var(--display);letter-spacing:-.05em;color:var(--ink)}
-.cc-media.gfx.acc{background:var(--fill)}
-.cc-media.gfx.acc .gfx-t{color:var(--on-fill)}
-.cc-body{display:flex;flex:1;flex-direction:column;padding:22px 24px 24px}
-.cc-body .org{display:block;margin-bottom:8px;font-size:15px;font-weight:600;color:var(--accent)}
-.cc-body h3{margin-bottom:8px;font-size:clamp(20px,1.9vw,24px)}
-.cc-body p{color:var(--sec)}
-.cc-score{display:flex;align-items:baseline;gap:10px;margin-top:auto;padding-top:16px}
-.cc-score b{font:800 30px/1 var(--display);letter-spacing:-.03em;color:var(--accent)}
-.cc-score span{font-size:15px;color:var(--mute)}
-.cc-det{margin-top:12px;border-top:1px solid var(--line)}
-.cc-det summary{padding:12px 0 0;color:var(--ink);font-weight:600;font-size:15px;cursor:pointer;list-style:none}
-.cc-det summary::-webkit-details-marker{display:none}
-.cc-det summary::after{content:"+";float:right;color:var(--accent);font-weight:700}
-.cc-det[open] summary::after{content:"−"}
-.scores{display:grid;gap:10px;margin:12px 0 0;padding:0;list-style:none}
-.scores li{display:grid;grid-template-columns:1fr auto;gap:5px 12px;align-items:baseline}
-.scores span{color:var(--sec);font-size:15px;line-height:1.35}
-.scores b{font:700 15.5px var(--display);color:var(--ink)}
-.scores .bar{grid-column:1/-1;display:block;height:3px;border-radius:2px;background:var(--line);overflow:hidden}
-.scores .bar i{display:block;height:100%;border-radius:2px;background:var(--accent)}
-.cc-det[open] .scores .bar i{animation:barin .9s var(--ease) both}
-@keyframes barin{from{transform:scaleX(0);transform-origin:0 50%}to{transform:none;transform-origin:0 50%}}
-@media (max-width:1000px){.ccards{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:640px){.ccards{grid-template-columns:1fr}}
+.clist{border-bottom:1px solid var(--line-strong)}
+.crow{position:relative;isolation:isolate;display:grid;grid-template-columns:clamp(44px,5vw,80px) minmax(0,1fr) clamp(150px,15vw,220px) clamp(150px,13vw,190px);column-gap:clamp(16px,2.6vw,40px);align-items:start;padding:clamp(26px,3.2vw,40px) 0;border-top:1px solid var(--line-strong)}
+.crow::before{content:"";position:absolute;inset:0 calc(var(--pad) * -1);background:var(--bg2);opacity:0;transition:opacity .3s;z-index:-1}
+.crow:hover::before{opacity:1}
+.cn{font:800 clamp(26px,3vw,40px)/1 var(--display);letter-spacing:-.04em;color:var(--mute);transition:color .3s}
+.crow:hover .cn{color:var(--accent)}
+.cmain .org{display:block;margin-bottom:8px;font-size:15px;font-weight:600;color:var(--accent)}
+.cmain h3{font:800 clamp(28px,3.4vw,50px)/1 var(--display);letter-spacing:-.04em;transition:transform .45s var(--ease)}
+.crow:hover .cmain h3{transform:translateX(8px)}
+.cmain>p{margin-top:12px;max-width:58ch;color:var(--sec)}
+.cmain .chips{margin-top:16px}
+.cmain .chip b{margin-left:4px;color:var(--accent)}
+.cthumb{padding-top:6px}
+.cprev{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 14px 34px rgba(0,0,0,.35);filter:grayscale(.7) brightness(.8);transform:rotate(-3deg);transition:filter .4s,transform .5s var(--ease),box-shadow .4s}
+[data-theme="light"] .cprev{filter:grayscale(.7);box-shadow:0 10px 26px rgba(0,0,0,.12)}
+.crow:hover .cprev{filter:none;transform:rotate(0) scale(1.06);box-shadow:0 22px 48px rgba(0,0,0,.45)}
+.cside{display:grid;gap:18px;justify-items:start}
+.cscore b{display:block;font:800 clamp(32px,3.4vw,50px)/1 var(--display);letter-spacing:-.04em;white-space:nowrap}
+.cscore span{display:block;margin-top:6px;font-size:15px;color:var(--mute)}
+.crow:hover .cscore b{color:var(--accent)}
+.cscore b{transition:color .3s}
+.cact{display:inline-flex;align-items:center;gap:4px;padding:10px 16px;border:1px solid var(--line-strong);border-radius:999px;color:var(--ink);font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap;transition:background .2s,color .2s,border-color .2s,transform .25s var(--ease)}
+.cact:hover{background:var(--fill);border-color:var(--fill);color:var(--on-fill);transform:translateY(-2px)}
+.cfoot{margin-top:24px;color:var(--sec)}
+@media (max-width:1000px){
+  .crow{grid-template-columns:clamp(40px,8vw,64px) minmax(0,1fr) clamp(140px,22vw,190px);row-gap:20px}
+  .cthumb{grid-column:3;grid-row:1}
+  .cside{grid-column:2/-1;grid-auto-flow:column;align-items:center;justify-content:start;gap:28px}
+}
+@media (max-width:640px){
+  .crow{grid-template-columns:clamp(36px,10vw,52px) minmax(0,1fr)}
+  .cthumb{grid-column:2;grid-row:auto;max-width:300px}
+  .cthumb:empty{display:none}
+  .cprev{transform:none;filter:none}
+  .cside{grid-column:2;grid-auto-flow:row;gap:14px}
+}
 
 /* ============================================================
    17. BTS SIO : comparateur SLAM / SISR et feuille de route
@@ -664,4 +661,3 @@ html:not(.js) .cmp [data-o="sisr"]::before{content:"SISR · ";color:var(--mute)}
 .legend i.o{background:transparent;box-shadow:inset 0 0 0 2px var(--accent)}
 .legend{gap:8px 10px;flex-wrap:wrap}
 .legend em{font-style:normal;margin-right:12px}
-.cc-score b{white-space:nowrap}
