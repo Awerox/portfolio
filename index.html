@@ -15,7 +15,7 @@
 <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/css/style.css?v=20261104h">
+<link rel="stylesheet" href="assets/css/style.css?v=20261104i">
 </head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
@@ -51,7 +51,7 @@
 </header>
 <!-- /#header -->
 
-<main id="main">
+<main id="main" class="home">
 
 <section class="hero" id="top">
   <div class="wrap">
@@ -183,13 +183,13 @@
     <div class="sec-head rv">
       <h2>Du lycée au BTS, un cap vers le développement.</h2>
     </div>
-    <div class="timeline">
-      <div class="tl rv"><em>2023 — 2024</em><b>Baccalauréat général</b><span>Mathématiques et Physique-Chimie — Lycée Romain Rolland, Ivry-sur-Seine</span></div>
-      <div class="tl rv"><em>2024 — 2025</em><b>Licence Informatique, 1<sup>re</sup> année</b><span>Université Sorbonne Paris Nord — Unix, Bash, projet en langage C</span></div>
-      <div class="tl rv"><em>Depuis 2025</em><b>BTS SIO — SLAM</b><span>ENC Bessières, Paris 17<sup>e</sup> — formation plus pratique, centrée sur le développement</span></div>
-      <div class="tl rv"><em>11 mai → 12 juin 2026</em><b>Stage de 1<sup>re</sup> année</b><span>Plateforme alumni de l'ENC Bessières — Next.js, Cloudinary, Vercel</span></div>
-      <div class="tl now rv"><em>9 nov. → 18 déc. 2026</em><b>Stage de 2<sup>e</sup> année — en recherche</b><span>5 semaines, Paris et Île-de-France, télétravail possible</span></div>
-      <div class="tl rv"><em>Après le BTS</em><b>Licence professionnelle</b><span>Objectif : approfondir le développement et la sécurité des applications</span></div>
+    <div class="ptl rv">
+      <div class="ptl-i  rv"><span class="ptl-y">2023 — 2024</span><div class="ptl-c"><h3>Baccalauréat général</h3><p>Mathématiques et Physique-Chimie — Lycée Romain Rolland, Ivry-sur-Seine</p></div></div>
+      <div class="ptl-i  rv"><span class="ptl-y">2024 — 2025</span><div class="ptl-c"><h3>Licence Informatique, 1<sup>re</sup> année</h3><p>Université Sorbonne Paris Nord — Unix, Bash, projet en langage C</p></div></div>
+      <div class="ptl-i  rv"><span class="ptl-y">Depuis 2025</span><div class="ptl-c"><h3>BTS SIO — SLAM</h3><p>ENC Bessières, Paris 17<sup>e</sup> — formation plus pratique, centrée sur le développement</p></div></div>
+      <div class="ptl-i  rv"><span class="ptl-y">11 mai → 12 juin 2026</span><div class="ptl-c"><h3>Stage de 1<sup>re</sup> année</h3><p>Plateforme alumni de l'ENC Bessières — Next.js, Cloudinary, Vercel</p></div></div>
+      <div class="ptl-i now rv"><span class="ptl-y">9 nov. → 18 déc. 2026</span><div class="ptl-c"><h3>Stage de 2<sup>e</sup> année — en recherche</h3><p>5 semaines, Paris et Île-de-France, télétravail possible</p></div></div>
+      <div class="ptl-i goal rv"><span class="ptl-y">Après le BTS</span><div class="ptl-c"><h3>Licence professionnelle</h3><p>Objectif : approfondir le développement et la sécurité des applications</p></div></div>
     </div>
   </section>
 
@@ -223,13 +223,13 @@
 
 <section class="sec wrap" id="veille">
   <div class="sec-head rv">
-    <h2>L'IA générative dans le développement : gain réel ou illusion ?</h2>
-    <p class="lead">Les assistants de code sont devenus courants. Ma veille suit ce qu'ils apportent, ce qu'ils risquent de dégrader et le cadre dans lequel les utiliser.</p>
+    <h2>L'IA qui aide à coder : vraie aide ou fausse promesse ?</h2>
+    <p class="lead">De plus en plus de développeurs utilisent une IA qui écrit du code à leur place. Ma veille cherche à savoir si elle fait vraiment gagner du temps, et si elle pose des problèmes.</p>
   </div>
-  <div class="rows">
-    <article class="card hov rv"><span class="mono" style="color:var(--accent)">Axe 01</span><h3 style="margin-top:10px">Gains de productivité</h3><p>Ce que les développeurs ressentent face à ce que les études mesurent.</p></article>
-    <article class="card hov rv"><span class="mono" style="color:var(--accent)">Axe 02</span><h3 style="margin-top:10px">Qualité et sécurité du code</h3><p>Un code qui compile n'est pas forcément un code sûr.</p></article>
-    <article class="card hov rv"><span class="mono" style="color:var(--accent)">Axe 03</span><h3 style="margin-top:10px">Usage responsable et cadre</h3><p>Confiance, données personnelles, RGPD et règles d'usage.</p></article>
+  <div class="bento b3">
+    <article class="tile rv"><span class="big">2 sur 3</span><p>utilisent déjà l'IA pour coder</p></article>
+    <article class="tile rv"><span class="big">+19 %</span><p>de temps mesuré, alors qu'ils pensaient aller plus vite</p></article>
+    <article class="tile rv"><span class="big">4 sur 10</span><p>codes générés contiennent une faille de sécurité</p></article>
   </div>
   <div class="rv" style="margin-top:28px">
     <a class="link" href="veille.html">Chiffres clés et sources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
@@ -240,12 +240,13 @@
   <div class="sec-head rv">
     <h2>Ce qui est validé.</h2>
   </div>
-  <div class="rv">
-    <div class="chips"><span class="chip chip-a">freeCodeCamp — Responsive Web Design</span>
-    <span class="chip chip-a">ANSSI — SecNumAcadémie</span>
-    <span class="chip chip-a">CNIL — attestation de suivi</span>
-    <span class="chip chip-a">Club EBIOS</span>
-    <span class="chip chip-a">PIX — 873 points</span></div></div>
+  <div class="cminis">
+    <a class="cmini rv" href="certifications.html"><span class="org">ANSSI</span><b>SecNumAcadémie</b><span class="cm-n">88,5 %</span><small>moyenne</small></a>
+    <a class="cmini rv" href="certifications.html"><span class="org">CNIL</span><b>L'Atelier RGPD</b><span class="cm-n">6/6</span><small>modules</small></a>
+    <a class="cmini rv" href="certifications.html"><span class="org">Club EBIOS</span><b>EBIOS Risk Manager</b><span class="cm-n">3 h</span><small>de MOOC</small></a>
+    <a class="cmini rv" href="certifications.html"><span class="org">freeCodeCamp</span><b>Responsive Web Design</b><span class="cm-n">✓</span><small>certifié</small></a>
+    <a class="cmini rv" href="certifications.html"><span class="org">PIX</span><b>Compétences numériques</b><span class="cm-n">873</span><small>points</small></a>
+  </div>
   <div class="rv" style="margin-top:22px">
     <a class="link" href="certifications.html">Voir le détail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
   </div>
@@ -263,7 +264,7 @@
   <div class="cta rv">
     <h2>Un stage à proposer ? <em>Parlons-en.</em></h2>
     <a class="mail" href="mailto:xualex300@gmail.com">xualex300@gmail.com</a>
-    <div class="row" style="margin-top:28px;justify-content:center">
+    <div class="row" style="margin-top:28px;display:flex;flex-wrap:wrap;gap:12px">
       <a class="btn btn-main" href="contact.html">Formulaire de contact
         <span class="cir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
       <a class="btn btn-ghost" href="cv.html">Le CV en PDF
@@ -309,7 +310,7 @@
 </footer>
 <!-- /#footer -->
 
-<script src="assets/js/config.js?v=20261104h"></script>
-<script src="assets/js/main.js?v=20261104h" defer></script>
+<script src="assets/js/config.js?v=20261104i"></script>
+<script src="assets/js/main.js?v=20261104i" defer></script>
 </body>
 </html>

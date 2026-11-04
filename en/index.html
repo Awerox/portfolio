@@ -15,7 +15,7 @@
 <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../assets/css/style.css?v=20261104h">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261104i">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -51,7 +51,7 @@
 </header>
 <!-- /#header -->
 
-<main id="main">
+<main id="main" class="home">
 
 <section class="hero" id="top">
   <div class="wrap">
@@ -183,13 +183,13 @@
     <div class="sec-head rv">
       <h2>From high school to the BTS, a course set on development.</h2>
     </div>
-    <div class="timeline">
-      <div class="tl rv"><em>2023 — 2024</em><b>General baccalauréat</b><span>Mathematics and Physics-Chemistry — Lycée Romain Rolland, Ivry-sur-Seine</span></div>
-      <div class="tl rv"><em>2024 — 2025</em><b>Computer Science degree, year 1</b><span>Université Sorbonne Paris Nord — Unix, Bash, C language project</span></div>
-      <div class="tl rv"><em>Since 2025</em><b>BTS SIO — SLAM</b><span>ENC Bessières, Paris 17th — a more hands-on programme focused on development</span></div>
-      <div class="tl rv"><em>11 May → 12 Jun 2026</em><b>Year-1 internship</b><span>ENC Bessières alumni platform — Next.js, Cloudinary, Vercel</span></div>
-      <div class="tl now rv"><em>9 Nov → 18 Dec 2026</em><b>Year-2 internship — in search</b><span>5 weeks, Paris and Île-de-France, remote possible</span></div>
-      <div class="tl rv"><em>After the BTS</em><b>Professional bachelor's degree</b><span>Goal: deepen application development and security</span></div>
+    <div class="ptl rv">
+      <div class="ptl-i  rv"><span class="ptl-y">2023 — 2024</span><div class="ptl-c"><h3>General baccalauréat</h3><p>Mathematics and Physics-Chemistry — Lycée Romain Rolland, Ivry-sur-Seine</p></div></div>
+      <div class="ptl-i  rv"><span class="ptl-y">2024 — 2025</span><div class="ptl-c"><h3>Computer Science degree, year 1</h3><p>Université Sorbonne Paris Nord — Unix, Bash, C language project</p></div></div>
+      <div class="ptl-i  rv"><span class="ptl-y">Since 2025</span><div class="ptl-c"><h3>BTS SIO — SLAM</h3><p>ENC Bessières, Paris 17th — a more hands-on programme focused on development</p></div></div>
+      <div class="ptl-i  rv"><span class="ptl-y">11 May → 12 Jun 2026</span><div class="ptl-c"><h3>Year-1 internship</h3><p>ENC Bessières alumni platform — Next.js, Cloudinary, Vercel</p></div></div>
+      <div class="ptl-i now rv"><span class="ptl-y">9 Nov → 18 Dec 2026</span><div class="ptl-c"><h3>Year-2 internship — in search</h3><p>5 weeks, Paris and Île-de-France, remote possible</p></div></div>
+      <div class="ptl-i goal rv"><span class="ptl-y">After the BTS</span><div class="ptl-c"><h3>Professional bachelor's degree</h3><p>Goal: deepen application development and security</p></div></div>
     </div>
   </section>
 
@@ -223,13 +223,13 @@
 
 <section class="sec wrap" id="veille">
   <div class="sec-head rv">
-    <h2>Generative AI in software development: real gain or illusion?</h2>
-    <p class="lead">Coding assistants have become commonplace. My watch follows what they bring, what they may degrade, and the framework in which to use them.</p>
+    <h2>AI that helps you code: real help or false promise?</h2>
+    <p class="lead">More and more developers use AI that writes code for them. My watch looks at whether it really saves time, and whether it causes problems.</p>
   </div>
-  <div class="rows">
-    <article class="card hov rv"><span class="mono" style="color:var(--accent)">Theme 01</span><h3 style="margin-top:10px">Productivity gains</h3><p>What developers feel versus what studies measure.</p></article>
-    <article class="card hov rv"><span class="mono" style="color:var(--accent)">Theme 02</span><h3 style="margin-top:10px">Code quality and security</h3><p>Code that compiles is not necessarily safe code.</p></article>
-    <article class="card hov rv"><span class="mono" style="color:var(--accent)">Theme 03</span><h3 style="margin-top:10px">Responsible use and framework</h3><p>Trust, personal data, GDPR and rules of use.</p></article>
+  <div class="bento b3">
+    <article class="tile rv"><span class="big">2 in 3</span><p>already use AI to code</p></article>
+    <article class="tile rv"><span class="big">+19%</span><p>time measured, while they thought they were faster</p></article>
+    <article class="tile rv"><span class="big">4 in 10</span><p>AI-generated code samples contain a security flaw</p></article>
   </div>
   <div class="rv" style="margin-top:28px">
     <a class="link" href="veille.html">Key figures and sources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
@@ -240,12 +240,13 @@
   <div class="sec-head rv">
     <h2>What is validated.</h2>
   </div>
-  <div class="rv">
-    <div class="chips"><span class="chip chip-a">freeCodeCamp — Responsive Web Design</span>
-    <span class="chip chip-a">ANSSI — SecNumAcadémie</span>
-    <span class="chip chip-a">CNIL — certificate of completion</span>
-    <span class="chip chip-a">Club EBIOS</span>
-    <span class="chip chip-a">PIX — 873 points</span></div></div>
+  <div class="cminis">
+    <a class="cmini rv" href="certifications.html"><span class="org">ANSSI</span><b>SecNumAcadémie</b><span class="cm-n">88.5%</span><small>average</small></a>
+    <a class="cmini rv" href="certifications.html"><span class="org">CNIL</span><b>Atelier RGPD</b><span class="cm-n">6/6</span><small>modules</small></a>
+    <a class="cmini rv" href="certifications.html"><span class="org">Club EBIOS</span><b>EBIOS Risk Manager</b><span class="cm-n">3 h</span><small>MOOC</small></a>
+    <a class="cmini rv" href="certifications.html"><span class="org">freeCodeCamp</span><b>Responsive Web Design</b><span class="cm-n">✓</span><small>certified</small></a>
+    <a class="cmini rv" href="certifications.html"><span class="org">PIX</span><b>Digital skills</b><span class="cm-n">873</span><small>points</small></a>
+  </div>
   <div class="rv" style="margin-top:22px">
     <a class="link" href="certifications.html">See details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
   </div>
@@ -263,7 +264,7 @@
   <div class="cta rv">
     <h2>An internship to offer? <em>Let's talk.</em></h2>
     <a class="mail" href="mailto:xualex300@gmail.com">xualex300@gmail.com</a>
-    <div class="row" style="margin-top:28px;justify-content:center">
+    <div class="row" style="margin-top:28px;display:flex;flex-wrap:wrap;gap:12px">
       <a class="btn btn-main" href="contact.html">Contact form
         <span class="cir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
       <a class="btn btn-ghost" href="../cv.html">CV as PDF (French)
@@ -309,7 +310,7 @@
 </footer>
 <!-- /#footer -->
 
-<script src="../assets/js/config.js?v=20261104h"></script>
-<script src="../assets/js/main.js?v=20261104h" defer></script>
+<script src="../assets/js/config.js?v=20261104i"></script>
+<script src="../assets/js/main.js?v=20261104i" defer></script>
 </body>
 </html>
