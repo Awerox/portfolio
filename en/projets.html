@@ -15,7 +15,7 @@
 <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../assets/css/style.css?v=20261104k">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261104l">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -51,7 +51,7 @@
 </header>
 <!-- /#header -->
 
-<main id="main">
+<main id="main" class="flow">
 
 <section class="pagehead wrap" id="top">
   <h1 class="rv">What I have<br><span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">built</span>.</h1>
@@ -61,13 +61,16 @@
 <section class="sec wrap sec-tight">
   <article class="feat rv">
     <div class="feat-media">
-      <div class="mock" aria-hidden="true">
-        <div class="code-bar"><i></i><i></i><i></i><span>alumni-clone.vercel.app</span></div>
-        <div class="mock-body">
-          <div><s class="w3"></s><s class="w1"></s><s class="w2"></s><s class="w4"></s><s class="w1"></s></div>
-          <div><span class="bx hl"></span><span class="bx"></span><span class="bx"></span></div>
+      <a class="mock live-mock" href="https://alumni-clone.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Live preview of the alumni platform">
+        <div class="code-bar"><i></i><i></i><i></i><span>alumni-clone.vercel.app</span><em class="live-tag"><b></b>Live</em></div>
+        <div class="mock-view">
+          <div class="mock-body" aria-hidden="true">
+            <div><s class="w3"></s><s class="w1"></s><s class="w2"></s><s class="w4"></s><s class="w1"></s></div>
+            <div><span class="bx hl"></span><span class="bx"></span><span class="bx"></span></div>
+          </div>
+          <iframe class="mock-frame" data-src="https://alumni-clone.vercel.app" title="Live preview of the alumni platform" tabindex="-1" loading="lazy" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin"></iframe>
         </div>
-      </div>
+      </a>
     </div>
     <div class="feat-body">
       <div><span class="badge badge-acc">Internship project · 2026</span></div>
@@ -87,13 +90,19 @@
 
 <section class="sec wrap sec-tight">
   <div class="prj-grid">
-    <article class="card hov rv prj">
+    <article class="card hov rv prj"><div class="mock mini" aria-hidden="true"><div class="code-bar"><i></i><i></i><i></i><span>terminal</span></div><pre class="term"><span class="pr">$</span> gcc morpion.c -o morpion
+<span class="pr">$</span> ./morpion
+ X | O | X
+---+---+---
+   | X | O
+---+---+---
+ O |   | <span class="cur">X</span></pre></div>
       <div class="meta"><span class="badge badge-acc">Computer science degree</span><span class="mono" style="color:var(--mute)">2024 — 2025</span></div>
       <h3>Adventure game and tic-tac-toe in C</h3>
       <p>End-of-semester university project at Université Sorbonne Paris Nord: an adventure game and a tic-tac-toe developed in C.</p>
       <div><div class="chips"><span class="chip">C</span><span class="chip">Unix</span><span class="chip">Bash</span></div></div>
     </article>
-    <article class="card hov rv prj">
+    <article class="card hov rv prj"><div class="mock mini" aria-hidden="true"><div class="code-bar"><i></i><i></i><i></i><span>awerox.github.io/portfolio</span></div><div class="pf-prev"><span class="pf-st"><b></b></span><span class="pf-h">ALEX XU<em>.</em></span><span class="pf-l"></span><span class="pf-l s"></span><span class="pf-btn"></span></div></div>
       <div class="meta"><span class="badge badge-acc">Personal</span><span class="mono" style="color:var(--mute)">2026</span></div>
       <h3>This portfolio</h3>
       <p>A bilingual static site (French and English), hand-written with no framework: remembered dark and light theme, animations that respect reduced motion, contact form wired to Formspree, keyboard navigation and careful contrast. Hosted on GitHub Pages.</p>
@@ -142,7 +151,7 @@
 </footer>
 <!-- /#footer -->
 
-<script src="../assets/js/config.js?v=20261104k"></script>
-<script src="../assets/js/main.js?v=20261104k" defer></script>
+<script src="../assets/js/config.js?v=20261104l"></script>
+<script src="../assets/js/main.js?v=20261104l" defer></script>
 </body>
 </html>

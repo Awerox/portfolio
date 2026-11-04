@@ -48,7 +48,7 @@ python3 _outils/verifier.py    # liens cassés, images sans alt, doublons, champ
 
 Ne pas modifier le menu à la main dans une page interne : la prochaine propagation l'écraserait.
 
-- **Cache du navigateur** : après une modification de `style.css` ou `main.js`, changer le numéro `?v=…` dans les pages (rechercher-remplacer `?v=20261104k` par une nouvelle valeur), sinon les visiteurs peuvent garder l'ancienne version.
+- **Cache du navigateur** : après une modification de `style.css` ou `main.js`, changer le numéro `?v=…` dans les pages (rechercher-remplacer `?v=20261104l` par une nouvelle valeur), sinon les visiteurs peuvent garder l'ancienne version.
 
 ## À garder à jour
 

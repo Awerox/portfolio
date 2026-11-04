@@ -179,6 +179,32 @@
     });
   }
 
+
+  /* ---------- aperçu en direct d'un site (page Projets) : repli sur le schéma si le site ne répond pas ---------- */
+  document.querySelectorAll('.live-mock').forEach(function (box) {
+    var fr = box.querySelector('.mock-frame'), view = box.querySelector('.mock-view');
+    if (!fr || !view) return;
+    var fit = function () { fr.style.transform = 'scale(' + (view.clientWidth / 1280) + ')'; };
+    fit();
+    if ('ResizeObserver' in window) new ResizeObserver(fit).observe(view); else window.addEventListener('resize', fit);
+    var start = function () {
+      var done = false;
+      var timer = setTimeout(function () { done = true; }, 12000);   /* trop lent : on garde le schéma */
+      /* 1. le site répond-il ? (sinon l'iframe afficherait une page d'erreur) */
+      var probe = window.fetch ? fetch(fr.dataset.src, { mode: 'no-cors', cache: 'no-store' }) : Promise.reject();
+      probe.then(function () {
+        if (done) return;
+        /* 2. il répond : on charge l'aperçu et on ne l'affiche qu'une fois chargé */
+        fr.addEventListener('load', function () { if (!done) { clearTimeout(timer); box.classList.add('is-live'); } });
+        fr.src = fr.dataset.src;
+      }).catch(function () { done = true; clearTimeout(timer); });
+    };
+    if ('IntersectionObserver' in window) {
+      var io2 = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { io2.disconnect(); start(); } }, { rootMargin: '200px' });
+      io2.observe(box);
+    } else { start(); }
+  });
+
   /* ---------- formulaire de contact ---------- */
   var form = document.getElementById('form-contact');
   if (!form) return;
