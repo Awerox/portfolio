@@ -664,3 +664,4 @@ html:not(.js) .cmp [data-o="sisr"]::before{content:"SISR · ";color:var(--mute)}
 .legend i.o{background:transparent;box-shadow:inset 0 0 0 2px var(--accent)}
 .legend{gap:8px 10px;flex-wrap:wrap}
 .legend em{font-style:normal;margin-right:12px}
+.cc-score b{white-space:nowrap}
