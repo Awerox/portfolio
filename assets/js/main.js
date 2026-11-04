@@ -156,7 +156,7 @@
         e.preventDefault();
         pages = a.dataset.view.split(','); idx = 0;
         label = a.closest('.cc').querySelector('h3').textContent;
-        vDl.href = a.getAttribute('href');
+        vDl.href = a.dataset.file || a.getAttribute('href');
         show(); dlg.showModal();
       });
     });
