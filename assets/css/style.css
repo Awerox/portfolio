@@ -726,3 +726,14 @@ html:not(.js) .cmp [data-o="sisr"]::before{content:"SISR · ";color:var(--mute)}
 .li-band .cact{flex:none}
 @media (max-width:1000px){.ccards{grid-template-columns:repeat(2,minmax(0,1fr))}.ccards>.cc,.ccards>.cc:nth-child(n+4){grid-column:span 1}.ccards>.cc:nth-child(5){grid-column:1/-1}}
 @media (max-width:640px){.ccards{grid-template-columns:1fr}.ccards>.cc:nth-child(5){grid-column:auto}.li-band{flex-wrap:wrap}.li-band .cact{margin-left:70px}}
+
+/* ---------- veille simplifiée ---------- */
+.bento.b3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tile .big{display:block;margin-bottom:14px;font:800 clamp(44px,5vw,72px)/1 var(--display);letter-spacing:-.045em;color:var(--accent)}
+.tile.ans h3{font-size:clamp(20px,2vw,26px)}
+.tile .big-p{font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:var(--sec)}
+.src .know{display:block;margin-top:4px;color:var(--mute);font-size:15px}
+.src-item b a{text-decoration:none}
+.src-item b a:hover{color:var(--accent)}
+@media (max-width:900px){.bento.b3{grid-template-columns:1fr}}
+.tile.full{grid-column:1/-1}
