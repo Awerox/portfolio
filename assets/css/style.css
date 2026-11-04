@@ -826,10 +826,10 @@ html:not(.js) .cmp [data-o="sisr"]::before{content:"SISR · ";color:var(--mute)}
 .js .tile:not(.in) .lg-bar i{transform:scaleX(0)}
 .ints{margin:14px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.5vw,32px)}
 .ints li{display:flex;gap:14px;align-items:flex-start}
-.int-ic{display:inline-flex;align-items:center;justify-content:center;flex:none;width:48px;height:48px;border-radius:12px;background:var(--bg);color:var(--accent);transition:transform .35s var(--ease)}
+.ints .int-ic{display:inline-flex;align-items:center;justify-content:center;flex:none;width:48px;height:48px;margin:0;border-radius:12px;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);transition:transform .35s var(--ease)}
 .ints li:hover .int-ic{transform:rotate(-8deg) scale(1.08)}
 .ints b{display:block;color:var(--ink);font:700 18px var(--display)}
-.ints span{display:block;margin-top:2px;color:var(--sec);font-size:15.5px}
+.ints li>div>span{display:block;margin-top:2px;color:var(--sec);font-size:15.5px}
 @media (max-width:900px){.ints{grid-template-columns:1fr}}
 @media (max-width:640px){
   .ptl::before,.ptl::after{left:5px}
