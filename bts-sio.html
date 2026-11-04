@@ -100,22 +100,42 @@
 </section>
 
 <section class="wrap blk" id="comparatif">
-  <h2 class="blk-h rv">SLAM ou SISR, ligne par ligne.</h2>
-  <div class="vs">
-    <div class="vs-h"><b style="color:var(--accent)">SLAM</b><i></i><b>SISR</b></div>
-    <div class="vs-r rv"><p class="l">Concevoir et développer des applications</p><b>Cœur du métier</b><p class="r">Installer et administrer des infrastructures</p></div>
-    <div class="vs-r rv"><p class="l">Des solutions applicatives et de leur développement</p><b>Cybersécurité</b><p class="r">Des infrastructures, des équipements et des accès</p></div>
-    <div class="vs-r rv"><p class="l">Langages, frameworks, bases de données, Git</p><b>Outils types</b><p class="r">Serveurs, réseaux, virtualisation, supervision</p></div>
-    <div class="vs-r rv"><p class="l">Logique, créativité, goût de construire un produit</p><b>Profil</b><p class="r">Rigueur, méthode, goût du fonctionnement des systèmes</p></div>
+  <div class="cmp-top">
+    <h2 class="blk-h rv">SLAM ou SISR ? Compare par toi-même.</h2>
+    <div class="seg rv" role="group" aria-label="SLAM / SISR">
+      <button type="button" data-set="slam" aria-pressed="true">SLAM</button><button type="button" data-set="sisr" aria-pressed="false">SISR</button>
+    </div>
+  </div>
+  <p class="note rv" style="margin:-14px 0 28px">Choisis une option pour voir ce qui change.</p>
+  <div class="cmp" id="cmp" data-opt="slam">
+    <div class="meter rv">
+      <b class="meter-t">Dominantes de l'option</b>
+        <div class="m-row"><span>Développement</span><b class="m-bar"><i style="--a:0.95;--b:0.2"></i></b></div>
+        <div class="m-row"><span>Bases de données</span><b class="m-bar"><i style="--a:0.8;--b:0.35"></i></b></div>
+        <div class="m-row"><span>Cybersécurité</span><b class="m-bar"><i style="--a:0.7;--b:0.85"></i></b></div>
+        <div class="m-row"><span>Réseaux et systèmes</span><b class="m-bar"><i style="--a:0.25;--b:0.95"></i></b></div>
+    </div>
+    <div class="cmp-grid">
+      <article class="cmp-c rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg></span><h3>Cœur du métier</h3><p data-o="slam">Concevoir et développer des applications</p><p data-o="sisr">Installer et administrer des infrastructures</p></article>
+      <article class="cmp-c rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 10v10"/></svg></span><h3>Bloc 2</h3><p data-o="slam">Conception et développement d'applications</p><p data-o="sisr">Administration des systèmes et des réseaux</p></article>
+      <article class="cmp-c rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 4.4-3.4 7.9-8 9-4.6-1.1-8-4.6-8-9V7z"/></svg></span><h3>Cybersécurité</h3><p data-o="slam">Des applications et de leur développement</p><p data-o="sisr">Des infrastructures, des équipements et des accès</p></article>
+      <article class="cmp-c rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span><h3>Outils types</h3><p data-o="slam">Langages, frameworks, bases de données, Git</p><p data-o="sisr">Serveurs, réseaux, virtualisation, supervision</p></article>
+      <article class="cmp-c rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span><h3>Profil</h3><p data-o="slam">Logique, créativité, goût de construire un produit</p><p data-o="sisr">Rigueur, méthode, goût du fonctionnement des systèmes</p></article>
+      <article class="cmp-c rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg></span><h3>Métiers</h3><p data-o="slam">Développeur web, full-stack, analyste-programmeur</p><p data-o="sisr">Technicien ou administrateur systèmes et réseaux</p></article>
+    </div>
   </div>
 </section>
 
 <section class="wrap blk" id="apres">
-  <h2 class="blk-h rv">Et après le BTS ?</h2>
-  <div class="steps">
-    <div class="step rv"><span class="n">01</span><h3>Licence professionnelle</h3><p>Spécialisation en développement ou en cybersécurité, souvent en alternance.</p></div>
-    <div class="step rv"><span class="n">02</span><h3>Bachelor ou école d'ingénieurs</h3><p>Poursuite d'études possible selon le dossier, jusqu'à bac+5.</p></div>
-    <div class="step rv"><span class="n">03</span><h3>Vie active</h3><p>Développeur junior, intégrateur, support applicatif. Mon cap : développeur web full-stack.</p></div>
+  <div class="cmp-top">
+    <h2 class="blk-h rv">Et après le BTS ?</h2>
+    <span class="legend rv"><i></i>Mon parcours visé</span>
+  </div>
+  <div class="road rv">
+    <div class="rc me"><span class="lv">Bac+2</span><div class="nd me"><b>BTS SIO option SLAM</b><small>2025 — 2027 · en cours</small></div></div>
+    <div class="rc me"><span class="lv">Bac+3</span><div class="nd me"><b>Licence professionnelle</b><small>Mon objectif après le BTS</small></div><div class="nd"><b>Bachelor</b><small>Développement ou cybersécurité</small></div></div>
+    <div class="rc"><span class="lv">Bac+5</span><div class="nd"><b>Master ou école d'ingénieurs</b><small>Admission sur dossier</small></div></div>
+    <div class="rc me"><span class="lv">Emploi</span><div class="nd me"><b>Développeur web</b><small>Junior, intégrateur, support applicatif</small></div></div>
   </div>
 </section>
 

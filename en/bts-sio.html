@@ -100,22 +100,42 @@
 </section>
 
 <section class="wrap blk" id="comparatif">
-  <h2 class="blk-h rv">SLAM or SISR, line by line.</h2>
-  <div class="vs">
-    <div class="vs-h"><b style="color:var(--accent)">SLAM</b><i></i><b>SISR</b></div>
-    <div class="vs-r rv"><p class="l">Designing and developing applications</p><b>Core of the job</b><p class="r">Installing and administering infrastructure</p></div>
-    <div class="vs-r rv"><p class="l">Of application solutions and their development</p><b>Cybersecurity</b><p class="r">Of infrastructure, equipment and access</p></div>
-    <div class="vs-r rv"><p class="l">Languages, frameworks, databases, Git</p><b>Typical tools</b><p class="r">Servers, networks, virtualisation, monitoring</p></div>
-    <div class="vs-r rv"><p class="l">Logic, creativity, taste for building a product</p><b>Profile</b><p class="r">Rigour, method, taste for how systems work</p></div>
+  <div class="cmp-top">
+    <h2 class="blk-h rv">SLAM or SISR? Compare for yourself.</h2>
+    <div class="seg rv" role="group" aria-label="SLAM / SISR">
+      <button type="button" data-set="slam" aria-pressed="true">SLAM</button><button type="button" data-set="sisr" aria-pressed="false">SISR</button>
+    </div>
+  </div>
+  <p class="note rv" style="margin:-14px 0 28px">Pick an option to see what changes.</p>
+  <div class="cmp" id="cmp" data-opt="slam">
+    <div class="meter rv">
+      <b class="meter-t">What each option focuses on</b>
+        <div class="m-row"><span>Development</span><b class="m-bar"><i style="--a:0.95;--b:0.2"></i></b></div>
+        <div class="m-row"><span>Databases</span><b class="m-bar"><i style="--a:0.8;--b:0.35"></i></b></div>
+        <div class="m-row"><span>Cybersecurity</span><b class="m-bar"><i style="--a:0.7;--b:0.85"></i></b></div>
+        <div class="m-row"><span>Networks and systems</span><b class="m-bar"><i style="--a:0.25;--b:0.95"></i></b></div>
+    </div>
+    <div class="cmp-grid">
+      <article class="cmp-c rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg></span><h3>Core of the job</h3><p data-o="slam">Designing and developing applications</p><p data-o="sisr">Installing and administering infrastructure</p></article>
+      <article class="cmp-c rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 10v10"/></svg></span><h3>Block 2</h3><p data-o="slam">Application design and development</p><p data-o="sisr">Systems and network administration</p></article>
+      <article class="cmp-c rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 4.4-3.4 7.9-8 9-4.6-1.1-8-4.6-8-9V7z"/></svg></span><h3>Cybersecurity</h3><p data-o="slam">Of applications and their development</p><p data-o="sisr">Of infrastructure, equipment and access</p></article>
+      <article class="cmp-c rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span><h3>Typical tools</h3><p data-o="slam">Languages, frameworks, databases, Git</p><p data-o="sisr">Servers, networks, virtualisation, monitoring</p></article>
+      <article class="cmp-c rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span><h3>Profile</h3><p data-o="slam">Logic, creativity, taste for building a product</p><p data-o="sisr">Rigour, method, taste for how systems work</p></article>
+      <article class="cmp-c rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg></span><h3>Jobs</h3><p data-o="slam">Web or full-stack developer, analyst-programmer</p><p data-o="sisr">Systems and networks technician or administrator</p></article>
+    </div>
   </div>
 </section>
 
 <section class="wrap blk" id="apres">
-  <h2 class="blk-h rv">And after the BTS?</h2>
-  <div class="steps">
-    <div class="step rv"><span class="n">01</span><h3>Professional bachelor's</h3><p>A specialisation in development or cybersecurity, often as a work-study programme.</p></div>
-    <div class="step rv"><span class="n">02</span><h3>Bachelor's or engineering school</h3><p>Further study is possible depending on the application, up to a five-year level.</p></div>
-    <div class="step rv"><span class="n">03</span><h3>Working life</h3><p>Junior developer, integrator, application support. My goal: full-stack web developer.</p></div>
+  <div class="cmp-top">
+    <h2 class="blk-h rv">And after the BTS?</h2>
+    <span class="legend rv"><i></i>My intended path</span>
+  </div>
+  <div class="road rv">
+    <div class="rc me"><span class="lv">2 years</span><div class="nd me"><b>BTS SIO, SLAM option</b><small>2025 — 2027 · in progress</small></div></div>
+    <div class="rc me"><span class="lv">3 years</span><div class="nd me"><b>Professional bachelor's</b><small>My goal after the BTS</small></div><div class="nd"><b>Bachelor's</b><small>Development or cybersecurity</small></div></div>
+    <div class="rc"><span class="lv">5 years</span><div class="nd"><b>Master's or engineering school</b><small>Admission on application</small></div></div>
+    <div class="rc me"><span class="lv">Job</span><div class="nd me"><b>Web developer</b><small>Junior, integrator, application support</small></div></div>
   </div>
 </section>
 

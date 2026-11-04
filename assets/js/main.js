@@ -124,6 +124,17 @@
     counts.forEach(function (el) { ioC.observe(el); });
   }
 
+
+  /* ---------- comparateur SLAM / SISR (page BTS SIO) ---------- */
+  var cmp = document.getElementById('cmp');
+  document.querySelectorAll('.seg button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (!cmp) return;
+      cmp.dataset.opt = b.dataset.set;
+      document.querySelectorAll('.seg button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    });
+  });
+
   /* ---------- formulaire de contact ---------- */
   var form = document.getElementById('form-contact');
   if (!form) return;
