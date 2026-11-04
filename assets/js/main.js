@@ -135,6 +135,39 @@
     });
   });
 
+
+  /* ---------- visionneuse d'attestations (page Certifications) ---------- */
+  var dlg = document.getElementById('viewer');
+  if (dlg && typeof dlg.showModal === 'function') {
+    var vImg = document.getElementById('v-img'), vCount = document.getElementById('v-count');
+    var vPrev = document.getElementById('v-prev'), vNext = document.getElementById('v-next');
+    var vPdf = document.getElementById('v-pdf'), vDl = document.getElementById('v-dl');
+    var pages = [], idx = 0, label = '';
+    var show = function () {
+      vImg.src = pages[idx];
+      vImg.alt = label + (pages.length > 1 ? ' — ' + (idx + 1) + '/' + pages.length : '');
+      vCount.textContent = label + (pages.length > 1 ? ' · ' + (idx + 1) + ' / ' + pages.length : '');
+      vPrev.hidden = vNext.hidden = pages.length < 2;
+    };
+    document.querySelectorAll('[data-view]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        pages = a.dataset.view.split(','); idx = 0;
+        label = a.closest('.cc').querySelector('h3').textContent;
+        vPdf.href = vDl.href = a.getAttribute('href');
+        show(); dlg.showModal();
+      });
+    });
+    vPrev.addEventListener('click', function () { idx = (idx + pages.length - 1) % pages.length; show(); });
+    vNext.addEventListener('click', function () { idx = (idx + 1) % pages.length; show(); });
+    document.getElementById('v-close').addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight' && pages.length > 1) vNext.click();
+      if (e.key === 'ArrowLeft' && pages.length > 1) vPrev.click();
+    });
+  }
+
   /* ---------- formulaire de contact ---------- */
   var form = document.getElementById('form-contact');
   if (!form) return;
