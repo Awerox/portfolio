@@ -841,17 +841,17 @@ html:not(.js) .cmp [data-o="sisr"]::before{content:"SISR · ";color:var(--mute)}
 }
 
 /* ---------- page d'accueil : sections en pleine largeur, cartes, frises ---------- */
-.home .sec{display:block}
-.home .sec>.sec-head{position:static;margin-bottom:clamp(24px,3.5vw,44px)}
-.home .sec>.sec-head h2{max-width:22ch;font-size:clamp(30px,4.2vw,56px)}
-.home .sec>.sec-head .lead{max-width:62ch;margin-top:14px}
-.home .weeks{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(14px,2vw,28px);padding-top:30px;border:0}
-.home .weeks::before{content:"";position:absolute;top:5px;left:0;right:0;height:2px;background:var(--line-strong)}
-.home .week{position:relative;display:block;padding:0;border:0}
-.home .week::before{content:"";position:absolute;top:-30px;left:0;width:12px;height:12px;border-radius:50%;background:var(--accent)}
-.home .week b{display:block;font-size:clamp(40px,4.6vw,60px)}
-.home .week em{display:block;margin:6px 0 8px;font-weight:600}
-.home .week p{font-size:16px}
+:is(.home,.flow) .sec{display:block}
+:is(.home,.flow) .sec>.sec-head{position:static;margin-bottom:clamp(24px,3.5vw,44px)}
+:is(.home,.flow) .sec>.sec-head h2{max-width:22ch;font-size:clamp(30px,4.2vw,56px)}
+:is(.home,.flow) .sec>.sec-head .lead{max-width:62ch;margin-top:14px}
+:is(.home,.flow) .weeks{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(14px,2vw,28px);padding-top:30px;border:0}
+:is(.home,.flow) .weeks::before{content:"";position:absolute;top:5px;left:0;right:0;height:2px;background:var(--line-strong)}
+:is(.home,.flow) .week{position:relative;display:block;padding:0;border:0}
+:is(.home,.flow) .week::before{content:"";position:absolute;top:-30px;left:0;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+:is(.home,.flow) .week b{display:block;font-size:clamp(40px,4.6vw,60px)}
+:is(.home,.flow) .week em{display:block;margin:6px 0 8px;font-weight:600}
+:is(.home,.flow) .week p{font-size:16px}
 .home #stage>.card{margin-top:clamp(32px,4vw,48px);padding:clamp(24px,3vw,40px);border:1px solid var(--line-strong);border-radius:16px;background:var(--bg2)}
 .home .rows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
 .home #competences .rows{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -876,9 +876,9 @@ html:not(.js) .cmp [data-o="sisr"]::before{content:"SISR · ";color:var(--mute)}
 .cmini:hover .cm-n{color:var(--accent)}
 @media (max-width:1100px){.cminis{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:900px){
-  .home .weeks{grid-template-columns:1fr;padding:0 0 0 30px;row-gap:22px}
-  .home .weeks::before{top:0;bottom:0;left:5px;right:auto;width:2px;height:auto}
-  .home .week::before{top:8px;left:-30px}
+  :is(.home,.flow) .weeks{grid-template-columns:1fr;padding:0 0 0 30px;row-gap:22px}
+  :is(.home,.flow) .weeks::before{top:0;bottom:0;left:5px;right:auto;width:2px;height:auto}
+  :is(.home,.flow) .week::before{top:8px;left:-30px}
   .home .rows,.home #competences .rows{grid-template-columns:1fr}
   .cminis{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
@@ -921,3 +921,44 @@ html:not(.js) .cmp [data-o="sisr"]::before{content:"SISR · ";color:var(--mute)}
 @media (max-width:1000px){.comp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tile.comp.t3,.tile.comp.t2s{grid-column:span 1}.tile.comp:last-child{grid-column:1/-1}}
 @media (max-width:640px){.comp-grid{grid-template-columns:1fr}.tile.comp:last-child{grid-column:auto}.rf-sum{justify-items:start}.rf-list li{flex-direction:column;gap:8px}}
 @media (max-width:900px){.rf-stats .stat:nth-child(3){padding-left:16px;border-left:1px solid var(--line);border-top:0}}
+
+/* ---------- page Stage ---------- */
+.flow .sec.band{background:transparent;border-top:0}
+.flow .sec.band::before{content:"";display:block;height:1px;margin-bottom:clamp(28px,4vw,52px);background:var(--line-strong)}
+.flow .band>.wrap{display:block}
+.flow .band>.wrap>.sec-head{position:static;margin-bottom:clamp(24px,3.5vw,44px)}
+.flow .band>.wrap>.sec-head h2{max-width:22ch;font-size:clamp(30px,4.2vw,56px)}
+.flow .sec .eyebrow{display:block;margin-bottom:10px;color:var(--accent)}
+.flow .sec>.card,.flow #technique .split>.card,.flow #stage-2 .card{padding:clamp(24px,3vw,40px);border:1px solid var(--line-strong);border-radius:16px;background:var(--bg2)}
+.flow #stage-1 .docs .doc{border-radius:999px}
+.fgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,18px)}
+.ftile{display:flex;align-items:center;gap:14px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--bg2);transition:transform .3s var(--ease),border-color .25s}
+.ftile:hover{transform:translateY(-3px);border-color:var(--accent)}
+.f-ok{display:inline-flex;align-items:center;justify-content:center;flex:none;width:34px;height:34px;border-radius:50%;background:color-mix(in srgb,var(--ok) 18%,transparent);color:var(--ok)}
+.ftile h3{flex:1;font-size:17px;line-height:1.3}
+.prio{flex:none;padding:2px 10px;border-radius:999px;font-size:13px;font-weight:600;border:1px solid var(--line-strong);color:var(--sec)}
+.prio.hi{background:var(--fill);border-color:var(--fill);color:var(--on-fill)}
+.prio.md{border-color:var(--accent);color:var(--accent)}
+.flow #technique .split{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);align-items:start}
+.flow #technique .mlist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.flow #technique .mlist li{padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--bg2)}
+.flow #technique .mlist li:last-child{border-bottom:1px solid var(--line)}
+.flow #technique .mlist b{display:block;margin-bottom:4px;color:var(--accent)}
+.flow #technique .split>.card dt{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14.5px;color:var(--accent)}
+.flow #technique .split>.card{position:sticky;top:calc(var(--hdr) + 24px)}
+.flow .diff{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,18px);counter-reset:dif}
+.flow .diff-item{display:flex;flex-direction:column;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--bg2);counter-increment:dif;transition:transform .3s var(--ease),border-color .25s}
+.flow .diff-item:last-child{border-bottom:1px solid var(--line)}
+.flow .diff-item:hover{transform:translateY(-3px);border-color:var(--accent)}
+.flow .diff-item::before{content:counter(dif,decimal-leading-zero);margin-bottom:10px;font:800 30px/1 var(--display);letter-spacing:-.04em;color:var(--accent)}
+.flow .diff-item b{margin-bottom:8px}
+.flow #difficultes .note{margin-top:clamp(18px,2vw,24px);padding:22px 24px;border:1px dashed var(--accent);border-left:1px dashed var(--accent);border-radius:16px}
+.flow #stage-2 .split{align-items:stretch}
+.flow #stage-2 .split>.rv:first-child{padding:clamp(24px,3vw,40px);border-radius:16px;background:var(--fill);color:var(--on-fill)}
+.flow #stage-2 .split>.rv:first-child .lead{color:var(--on-fill)}
+.flow #stage-2 .split>.rv:first-child .badge{color:var(--on-fill)}
+.flow #stage-2 .split>.rv:first-child .btn-main{background:var(--on-fill);color:var(--fill)}
+.flow #stage-2 .split>.rv:first-child .btn-ghost{border-color:var(--on-fill);color:var(--on-fill)}
+.flow #stage-2 .row{display:flex;flex-wrap:wrap;gap:12px}
+@media (max-width:1000px){.fgrid,.flow .diff{grid-template-columns:repeat(2,minmax(0,1fr))}.flow #technique .split{grid-template-columns:1fr}.flow #technique .split>.card{position:static}}
+@media (max-width:640px){.fgrid,.flow .diff,.flow #technique .mlist{grid-template-columns:1fr}}

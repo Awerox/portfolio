@@ -15,7 +15,7 @@
 <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../assets/css/style.css?v=20261104j">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261104k">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -51,7 +51,7 @@
 </header>
 <!-- /#header -->
 
-<main id="main">
+<main id="main" class="flow">
 
 <section class="pagehead wrap" id="top">
   <h1 class="rv">An internship at school,<br>a platform <span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">live</span>.</h1>
@@ -98,21 +98,16 @@
     <h2>Nine features, all delivered.</h2>
     <p class="lead">Before coding, I listed the expected features and their priority, so as not to waste time and to deliver what was actually requested.</p>
   </div>
-  <div class="tbl-wrap rv">
-    <table class="tbl" style="min-width:560px">
-      <thead><tr><th>Feature</th><th>Priority</th><th>Status</th></tr></thead>
-      <tbody>
-        <tr><td>Authentication (Google OAuth)</td><td>High</td><td><span class="badge badge-ok">Done</span></td></tr>
-        <tr><td>User profiles</td><td>High</td><td><span class="badge badge-ok">Done</span></td></tr>
-        <tr><td>Member directory</td><td>High</td><td><span class="badge badge-ok">Done</span></td></tr>
-        <tr><td>Activity feed</td><td>High</td><td><span class="badge badge-ok">Done</span></td></tr>
-        <tr><td>Blog and news</td><td>Medium</td><td><span class="badge badge-ok">Done</span></td></tr>
-        <tr><td>Job and internship offers</td><td>High</td><td><span class="badge badge-ok">Done</span></td></tr>
-        <tr><td>Mentoring system</td><td>Medium</td><td><span class="badge badge-ok">Done</span></td></tr>
-        <tr><td>Internal messaging</td><td>Medium</td><td><span class="badge badge-ok">Done</span></td></tr>
-        <tr><td>Help page</td><td>Low</td><td><span class="badge badge-ok">Done</span></td></tr>
-      </tbody>
-    </table>
+  <div class="fgrid">
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Authentication (Google OAuth)</h3><span class="prio hi">High</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>User profiles</h3><span class="prio hi">High</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Member directory</h3><span class="prio hi">High</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Activity feed</h3><span class="prio hi">High</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Blog and news</h3><span class="prio md">Medium</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Job and internship offers</h3><span class="prio hi">High</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Mentoring system</h3><span class="prio md">Medium</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Internal messaging</h3><span class="prio md">Medium</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Help page</h3><span class="prio lo">Low</span></article>
   </div>
 </section>
 
@@ -139,12 +134,12 @@
       <h2 style="font-size:clamp(28px,3.6vw,44px);margin-bottom:22px">Professional tools, owned by the school.</h2>
       <p class="lead" style="margin-bottom:22px;font-size:16.5px">One selection criterion: every service (hosting, database, images) is tied to an account owned by ENC Bessières, which can access or migrate its data at any time.</p>
       <ul class="mlist">
-        <li><b>Next.js / React</b> — front-end framework: fast pages, reusable components</li>
-        <li><b>Vercel</b> — hosting and automatic deployment on every change</li>
-        <li><b>Cloudinary</b> — image storage and optimisation (profiles, posts, blog)</li>
-        <li><b>OAuth 2.0 (Google)</b> — one-click sign-in, no password stored</li>
-        <li><b>Git / GitHub</b> — full history of code changes</li>
-        <li><b>VS Code, ESLint, Prettier, DevTools</b> — editing, code quality, interface testing</li>
+        <li><b>Next.js / React</b> front-end framework: fast pages, reusable components</li>
+        <li><b>Vercel</b> hosting and automatic deployment on every change</li>
+        <li><b>Cloudinary</b> image storage and optimisation (profiles, posts, blog)</li>
+        <li><b>OAuth 2.0 (Google)</b> one-click sign-in, no password stored</li>
+        <li><b>Git / GitHub</b> full history of code changes</li>
+        <li><b>VS Code, ESLint, Prettier, DevTools</b> editing, code quality, interface testing</li>
       </ul>
     </div>
     <div class="card rv">
@@ -245,7 +240,7 @@
 </footer>
 <!-- /#footer -->
 
-<script src="../assets/js/config.js?v=20261104j"></script>
-<script src="../assets/js/main.js?v=20261104j" defer></script>
+<script src="../assets/js/config.js?v=20261104k"></script>
+<script src="../assets/js/main.js?v=20261104k" defer></script>
 </body>
 </html>

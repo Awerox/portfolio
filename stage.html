@@ -15,7 +15,7 @@
 <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/css/style.css?v=20261104j">
+<link rel="stylesheet" href="assets/css/style.css?v=20261104k">
 </head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
@@ -51,7 +51,7 @@
 </header>
 <!-- /#header -->
 
-<main id="main">
+<main id="main" class="flow">
 
 <section class="pagehead wrap" id="top">
   <h1 class="rv">Un stage à l'école,<br>une plateforme <span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">en ligne</span>.</h1>
@@ -98,21 +98,16 @@
     <h2>Neuf fonctionnalités, toutes livrées.</h2>
     <p class="lead">Avant de coder, j'ai listé les fonctionnalités attendues et leur niveau de priorité, pour ne pas perdre de temps et livrer ce qui était réellement demandé.</p>
   </div>
-  <div class="tbl-wrap rv">
-    <table class="tbl" style="min-width:560px">
-      <thead><tr><th>Fonctionnalité</th><th>Priorité</th><th>Statut</th></tr></thead>
-      <tbody>
-        <tr><td>Authentification (OAuth Google)</td><td>Haute</td><td><span class="badge badge-ok">Réalisé</span></td></tr>
-        <tr><td>Profils utilisateurs</td><td>Haute</td><td><span class="badge badge-ok">Réalisé</span></td></tr>
-        <tr><td>Annuaire des membres</td><td>Haute</td><td><span class="badge badge-ok">Réalisé</span></td></tr>
-        <tr><td>Fil d'activité (feed)</td><td>Haute</td><td><span class="badge badge-ok">Réalisé</span></td></tr>
-        <tr><td>Blog et actualités</td><td>Moyenne</td><td><span class="badge badge-ok">Réalisé</span></td></tr>
-        <tr><td>Offres d'emploi et de stages</td><td>Haute</td><td><span class="badge badge-ok">Réalisé</span></td></tr>
-        <tr><td>Système de mentorat</td><td>Moyenne</td><td><span class="badge badge-ok">Réalisé</span></td></tr>
-        <tr><td>Messagerie interne</td><td>Moyenne</td><td><span class="badge badge-ok">Réalisé</span></td></tr>
-        <tr><td>Page d'aide</td><td>Faible</td><td><span class="badge badge-ok">Réalisé</span></td></tr>
-      </tbody>
-    </table>
+  <div class="fgrid">
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Authentification (OAuth Google)</h3><span class="prio hi">Haute</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Profils utilisateurs</h3><span class="prio hi">Haute</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Annuaire des membres</h3><span class="prio hi">Haute</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Fil d'activité (feed)</h3><span class="prio hi">Haute</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Blog et actualités</h3><span class="prio md">Moyenne</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Offres d'emploi et de stages</h3><span class="prio hi">Haute</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Système de mentorat</h3><span class="prio md">Moyenne</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Messagerie interne</h3><span class="prio md">Moyenne</span></article>
+    <article class="ftile rv"><span class="f-ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Page d'aide</h3><span class="prio lo">Faible</span></article>
   </div>
 </section>
 
@@ -139,12 +134,12 @@
       <h2 style="font-size:clamp(28px,3.6vw,44px);margin-bottom:22px">Des outils professionnels, détenus par l'école.</h2>
       <p class="lead" style="margin-bottom:22px;font-size:16.5px">Un critère de choix : chaque service (hébergement, base de données, images) est rattaché à un compte détenu par l'ENC Bessières, qui peut à tout moment accéder à ses données ou les migrer.</p>
       <ul class="mlist">
-        <li><b>Next.js / React</b> — framework front-end : pages rapides, composants réutilisables</li>
-        <li><b>Vercel</b> — hébergement et déploiement automatique à chaque modification</li>
-        <li><b>Cloudinary</b> — stockage et optimisation des images (profils, publications, blog)</li>
-        <li><b>OAuth 2.0 (Google)</b> — connexion en un clic, aucun mot de passe stocké</li>
-        <li><b>Git / GitHub</b> — historique complet des modifications du code</li>
-        <li><b>VS Code, ESLint, Prettier, DevTools</b> — édition, qualité du code, tests de l'interface</li>
+        <li><b>Next.js / React</b> framework front-end : pages rapides, composants réutilisables</li>
+        <li><b>Vercel</b> hébergement et déploiement automatique à chaque modification</li>
+        <li><b>Cloudinary</b> stockage et optimisation des images (profils, publications, blog)</li>
+        <li><b>OAuth 2.0 (Google)</b> connexion en un clic, aucun mot de passe stocké</li>
+        <li><b>Git / GitHub</b> historique complet des modifications du code</li>
+        <li><b>VS Code, ESLint, Prettier, DevTools</b> édition, qualité du code, tests de l'interface</li>
       </ul>
     </div>
     <div class="card rv">
@@ -245,7 +240,7 @@
 </footer>
 <!-- /#footer -->
 
-<script src="assets/js/config.js?v=20261104j"></script>
-<script src="assets/js/main.js?v=20261104j" defer></script>
+<script src="assets/js/config.js?v=20261104k"></script>
+<script src="assets/js/main.js?v=20261104k" defer></script>
 </body>
 </html>
