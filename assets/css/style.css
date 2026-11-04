@@ -789,3 +789,53 @@ html:not(.js) .cmp [data-o="sisr"]::before{content:"SISR · ";color:var(--mute)}
 .pm-col.minus li::before{content:"!";color:var(--err)}
 @media (max-width:900px){.dates{grid-template-columns:1fr 1fr;row-gap:44px}.dates::before{display:none}.dt::before{top:-20px}.code-cmp,.pm{grid-template-columns:1fr}}
 @media (max-width:620px){.dates{grid-template-columns:1fr}.ans-top{flex-direction:column;align-items:flex-start}.pic-dots{justify-content:flex-start}}
+
+/* ---------- page Profil : frise du parcours, expériences, langues, intérêts ---------- */
+.ptl{position:relative}
+.ptl::before,.ptl::after{content:"";position:absolute;top:8px;bottom:8px;left:calc(clamp(130px,16vw,220px) + 5px);width:2px;background:var(--line-strong)}
+.ptl::after{background:var(--accent);transform:scaleY(0);transform-origin:50% 0;transition:transform 1.8s var(--ease)}
+.ptl.in::after{transform:none}
+.ptl-i{position:relative;display:grid;grid-template-columns:clamp(130px,16vw,220px) minmax(0,1fr);column-gap:clamp(36px,4vw,56px);padding:0 0 clamp(26px,3vw,40px)}
+.ptl-i::before{content:"";position:absolute;z-index:1;top:6px;left:clamp(130px,16vw,220px);width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--bg)}
+.ptl-y{padding:2px 26px 0 0;font:700 clamp(16px,1.5vw,19px)/1.3 var(--display);color:var(--mute);text-align:right}
+.ptl-c{padding:20px 24px;border:1px solid var(--line);border-radius:14px;background:var(--bg2);transition:transform .35s var(--ease),border-color .25s}
+.ptl-i:hover .ptl-c{transform:translateX(6px);border-color:var(--line-strong)}
+.ptl-c h3{font-size:clamp(20px,2vw,26px)}
+.ptl-c p{margin-top:6px;color:var(--sec);max-width:64ch}
+.ptl-c .chips{margin-top:12px}
+.ptl-i.now .ptl-y{color:var(--accent)}
+.ptl-i.now .ptl-c{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.ptl-i.now::before{box-shadow:0 0 0 5px var(--bg),0 0 0 9px color-mix(in srgb,var(--accent) 35%,transparent)}
+.ptl-now{margin-left:8px;font-size:14px;vertical-align:4px}
+.ptl-i.goal::before{background:var(--bg);box-shadow:0 0 0 5px var(--bg),inset 0 0 0 2px var(--accent)}
+.ptl-i.goal .ptl-c{background:transparent;border-style:dashed;border-color:var(--accent)}
+.tile-ic{display:inline-flex;margin-bottom:10px;color:var(--accent)}
+.jobs{margin:14px 0 0;padding:0;list-style:none}
+.jobs li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.jobs b{display:block;color:var(--ink)}
+.jobs span{display:block;color:var(--sec);font-size:15.5px}
+.jobs em{flex:none;font-style:normal;font-size:15px;color:var(--mute);text-align:right}
+.jobs-p{margin-top:12px;color:var(--sec)}
+.tile .chips{margin-top:10px}
+.langs{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:16px}
+.lg-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:7px}
+.lg-top b{color:var(--ink)}
+.lg-top span{font-size:15px;color:var(--mute)}
+.lg-bar{display:block;height:8px;border-radius:999px;background:var(--line);overflow:hidden}
+.lg-bar i{display:block;height:100%;border-radius:999px;background:var(--accent);transform-origin:0 50%;transform:scaleX(var(--v));transition:transform 1.2s var(--ease) .2s}
+.js .tile:not(.in) .lg-bar i{transform:scaleX(0)}
+.ints{margin:14px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.5vw,32px)}
+.ints li{display:flex;gap:14px;align-items:flex-start}
+.int-ic{display:inline-flex;align-items:center;justify-content:center;flex:none;width:48px;height:48px;border-radius:12px;background:var(--bg);color:var(--accent);transition:transform .35s var(--ease)}
+.ints li:hover .int-ic{transform:rotate(-8deg) scale(1.08)}
+.ints b{display:block;color:var(--ink);font:700 18px var(--display)}
+.ints span{display:block;margin-top:2px;color:var(--sec);font-size:15.5px}
+@media (max-width:900px){.ints{grid-template-columns:1fr}}
+@media (max-width:640px){
+  .ptl::before,.ptl::after{left:5px}
+  .ptl-i{grid-template-columns:1fr;padding-left:30px;row-gap:8px}
+  .ptl-i::before{left:0}
+  .ptl-y{text-align:left;padding-right:0}
+  .jobs li{flex-direction:column;gap:4px}
+  .jobs em{text-align:left}
+}
