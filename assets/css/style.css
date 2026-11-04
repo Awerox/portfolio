@@ -528,3 +528,30 @@ sup{font-size:.62em;line-height:0}
   .vs-r .r::before{content:"SISR · ";color:var(--mute);font-weight:700}
 }
 @media (max-width:620px){.bento{grid-template-columns:1fr}.tile.t2{grid-column:auto}}
+
+/* ============================================================
+   15. PAGE VEILLE : question, méthode, sources commentées
+   ============================================================ */
+.steps.s4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.tile p b{color:var(--ink);font-weight:600}
+.tile.acc p b{color:inherit}
+.tile.q .mono{display:block;margin-bottom:10px;color:var(--on-fill);opacity:.75}
+.tile.q p{font:700 clamp(22px,2.8vw,36px)/1.2 var(--display);letter-spacing:-.025em}
+.srcgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.srcc-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.srcc-top time{color:var(--mute);font-size:15px}
+.srcc h3 a{color:var(--ink);text-decoration:none}
+.srcc h3 a:hover{color:var(--accent)}
+.srcc dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.srcc dt{font-size:14px;font-weight:600;color:var(--mute);padding-top:2px}
+.srcc dd{margin:0;color:var(--sec)}
+.srcc .via{margin-top:14px;font-size:15px;color:var(--mute)}
+.srcc .via a{color:var(--accent);text-underline-offset:3px}
+.tile.acc .why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.5vw,32px);margin:18px 0 0;padding:0;list-style:none}
+.tile.acc .why li{padding-top:14px;border-top:2px solid color-mix(in srgb,var(--on-fill) 35%,transparent);color:var(--on-fill);font-size:16.5px;line-height:1.45}
+.tile.acc .why b{display:block;margin-bottom:4px;font:700 19px var(--display)}
+.tile.acc .goal{margin-top:20px;font-weight:600}
+@media (max-width:1100px){.steps.s4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.srcgrid,.tile.acc .why{grid-template-columns:1fr}}
+@media (max-width:620px){.steps.s4{grid-template-columns:1fr}}
+.srcgrid>.srcc:last-child:nth-child(odd){grid-column:1/-1}
