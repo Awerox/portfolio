@@ -557,18 +557,47 @@ sup{font-size:.62em;line-height:0}
 .srcgrid>.srcc:last-child:nth-child(odd){grid-column:1/-1}
 
 /* ============================================================
-   16. PAGE CERTIFICATIONS : scores et attestations
+   16. PAGE CERTIFICATIONS : cartes avec aperçu des attestations
    ============================================================ */
-.certs .grid-3{row-gap:8px}
-.cert{display:flex;flex-direction:column}
-.cert .dl{display:inline-flex;align-items:center;width:fit-content;white-space:nowrap;margin-top:18px}
-.scores{display:grid;gap:10px;margin:16px 0 0;padding:14px 0 0;border-top:1px dashed var(--line);list-style:none}
+.ccards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
+.cc{display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--line-strong);border-radius:16px;background:var(--bg2);transition:transform .35s var(--ease),border-color .25s}
+.cc:hover{transform:translateY(-4px);border-color:var(--accent)}
+.cc-media{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:#fff;color:inherit;text-decoration:none}
+.cc-media img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:transform .6s var(--ease)}
+.cc:hover .cc-media img{transform:scale(1.05)}
+.cc-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(14,14,16,.55));pointer-events:none}
+.cc-media.stack{background:var(--bg2);padding:14px 22px 0 14px}
+.cc-media.stack img{position:relative;z-index:2;border-radius:6px 6px 0 0;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.cc-media.stack::before{content:"";position:absolute;z-index:1;top:6px;left:24px;right:10px;bottom:0;border-radius:6px 6px 0 0;background:#e9e7e2;box-shadow:8px -6px 0 -1px #d6d3cc}
+.cc-dl{position:absolute;z-index:3;right:12px;bottom:12px;display:inline-flex;align-items:center;padding:7px 14px;border-radius:999px;background:var(--fill);color:var(--on-fill);font-weight:700;font-size:15px;box-shadow:0 4px 14px rgba(0,0,0,.3);transition:transform .25s var(--ease)}
+.cc-media:hover .cc-dl,.cc-media:focus-visible .cc-dl{transform:translateY(-3px)}
+.cc-media.gfx{display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 90% at 20% 10%,color-mix(in srgb,var(--accent) 22%,var(--bg2)),var(--bg) 70%)}
+.cc-media.gfx::after{display:none}
+.gfx-t{font:800 clamp(56px,7vw,96px)/1 var(--display);letter-spacing:-.05em;color:var(--ink)}
+.cc-media.gfx.acc{background:var(--fill)}
+.cc-media.gfx.acc .gfx-t{color:var(--on-fill)}
+.cc-body{display:flex;flex:1;flex-direction:column;padding:22px 24px 24px}
+.cc-body .org{display:block;margin-bottom:8px;font-size:15px;font-weight:600;color:var(--accent)}
+.cc-body h3{margin-bottom:8px;font-size:clamp(20px,1.9vw,24px)}
+.cc-body p{color:var(--sec)}
+.cc-score{display:flex;align-items:baseline;gap:10px;margin-top:auto;padding-top:16px}
+.cc-score b{font:800 30px/1 var(--display);letter-spacing:-.03em;color:var(--accent)}
+.cc-score span{font-size:15px;color:var(--mute)}
+.cc-det{margin-top:12px;border-top:1px solid var(--line)}
+.cc-det summary{padding:12px 0 0;color:var(--ink);font-weight:600;font-size:15px;cursor:pointer;list-style:none}
+.cc-det summary::-webkit-details-marker{display:none}
+.cc-det summary::after{content:"+";float:right;color:var(--accent);font-weight:700}
+.cc-det[open] summary::after{content:"−"}
+.scores{display:grid;gap:10px;margin:12px 0 0;padding:0;list-style:none}
 .scores li{display:grid;grid-template-columns:1fr auto;gap:5px 12px;align-items:baseline}
 .scores span{color:var(--sec);font-size:15px;line-height:1.35}
 .scores b{font:700 15.5px var(--display);color:var(--ink)}
 .scores .bar{grid-column:1/-1;display:block;height:3px;border-radius:2px;background:var(--line);overflow:hidden}
-.scores .bar i{display:block;height:100%;border-radius:2px;background:var(--accent);transform-origin:0 50%;transition:transform 1.1s var(--ease) .2s}
-.js .rv:not(.in) .scores .bar i{transform:scaleX(0)}
+.scores .bar i{display:block;height:100%;border-radius:2px;background:var(--accent)}
+.cc-det[open] .scores .bar i{animation:barin .9s var(--ease) both}
+@keyframes barin{from{transform:scaleX(0);transform-origin:0 50%}to{transform:none;transform-origin:0 50%}}
+@media (max-width:1000px){.ccards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.ccards{grid-template-columns:1fr}}
 
 /* ============================================================
    17. BTS SIO : comparateur SLAM / SISR et feuille de route
@@ -627,3 +656,11 @@ html:not(.js) .cmp [data-o="sisr"]::before{content:"SISR · ";color:var(--mute)}
   .road.in::after{transform:none}
   .rc::before{top:4px;left:-30px}
 }
+
+.nd.maybe{border:1px dashed var(--accent);background:transparent}
+.nd.maybe b{color:var(--ink)}
+.rc.maybe::before{background:var(--bg);box-shadow:inset 0 0 0 2px var(--accent)}
+.rc.maybe .lv{color:var(--ink)}
+.legend i.o{background:transparent;box-shadow:inset 0 0 0 2px var(--accent)}
+.legend{gap:8px 10px;flex-wrap:wrap}
+.legend em{font-style:normal;margin-right:12px}
