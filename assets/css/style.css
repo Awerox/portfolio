@@ -555,3 +555,23 @@ sup{font-size:.62em;line-height:0}
 @media (max-width:900px){.srcgrid,.tile.acc .why{grid-template-columns:1fr}}
 @media (max-width:620px){.steps.s4{grid-template-columns:1fr}}
 .srcgrid>.srcc:last-child:nth-child(odd){grid-column:1/-1}
+
+/* ============================================================
+   16. PAGE CERTIFICATIONS : scores et attestations
+   ============================================================ */
+.tile.t4{grid-column:1/-1}
+.bento.b3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cert2 .org{display:block;margin-bottom:10px;font-size:15px;font-weight:600;color:var(--accent)}
+.cert2 .dl{align-self:flex-start;margin-top:auto;padding-top:18px}
+.tile.acc.pix .org{color:var(--on-fill);opacity:.75}
+.tile.acc.pix h3{font-size:clamp(44px,5vw,72px);letter-spacing:-.045em;line-height:1}
+.scores{display:grid;gap:12px;margin:18px 0 4px;padding:0;list-style:none}
+.scores li{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:baseline}
+.scores span{color:var(--sec);font-size:15.5px}
+.scores b{font:700 16px var(--display);color:var(--ink)}
+.scores .bar{grid-column:1/-1;display:block;height:4px;border-radius:2px;background:var(--line);overflow:hidden}
+.scores .bar i{display:block;height:100%;border-radius:2px;background:var(--accent);transform-origin:0 50%;transition:transform 1.1s var(--ease) .15s}
+.js .rv:not(.in) .scores .bar i{transform:scaleX(0)}
+@media (max-width:900px){.bento.b3{grid-template-columns:1fr}}
+.cert2 .dl{display:inline-flex;align-items:center;width:fit-content;white-space:nowrap}
+.bento.b3 .tile.acc{grid-column:auto}
