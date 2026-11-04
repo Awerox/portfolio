@@ -141,9 +141,11 @@
   if (dlg && typeof dlg.showModal === 'function') {
     var vImg = document.getElementById('v-img'), vCount = document.getElementById('v-count');
     var vPrev = document.getElementById('v-prev'), vNext = document.getElementById('v-next');
-    var vPdf = document.getElementById('v-pdf'), vDl = document.getElementById('v-dl');
+    var vDl = document.getElementById('v-dl');
     var pages = [], idx = 0, label = '';
+    vImg.addEventListener('load', function () { vImg.classList.remove('ld'); });
     var show = function () {
+      vImg.classList.add('ld');
       vImg.src = pages[idx];
       vImg.alt = label + (pages.length > 1 ? ' — ' + (idx + 1) + '/' + pages.length : '');
       vCount.textContent = label + (pages.length > 1 ? ' · ' + (idx + 1) + ' / ' + pages.length : '');
@@ -154,14 +156,23 @@
         e.preventDefault();
         pages = a.dataset.view.split(','); idx = 0;
         label = a.closest('.cc').querySelector('h3').textContent;
-        vPdf.href = vDl.href = a.getAttribute('href');
+        vDl.href = a.getAttribute('href');
         show(); dlg.showModal();
       });
     });
     vPrev.addEventListener('click', function () { idx = (idx + pages.length - 1) % pages.length; show(); });
     vNext.addEventListener('click', function () { idx = (idx + 1) % pages.length; show(); });
-    document.getElementById('v-close').addEventListener('click', function () { dlg.close(); });
-    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    var closeV = function () {
+      dlg.classList.add('out');
+      setTimeout(function () { dlg.close(); dlg.classList.remove('out'); }, reduce ? 0 : 220);
+    };
+    document.getElementById('v-close').addEventListener('click', closeV);
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) closeV(); });
+    dlg.addEventListener('cancel', function (e) { e.preventDefault(); closeV(); });
+    /* précharge les pages pour un passage instantané */
+    document.querySelectorAll('[data-view]').forEach(function (a) {
+      a.addEventListener('mouseenter', function () { a.dataset.view.split(',').forEach(function (s) { new Image().src = s; }); }, { once: true });
+    });
     dlg.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowRight' && pages.length > 1) vNext.click();
       if (e.key === 'ArrowLeft' && pages.length > 1) vPrev.click();

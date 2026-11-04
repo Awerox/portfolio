@@ -669,9 +669,7 @@ html:not(.js) .cmp [data-o="sisr"]::before{content:"SISR · ";color:var(--mute)}
 .cc-get{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;margin-top:16px;padding-top:2px;color:var(--sec);font-size:15px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--line-strong);transition:color .2s,border-color .2s}
 .cc-get svg{width:15px;height:15px}
 .cc-get:hover{color:var(--accent);border-color:var(--accent)}
-.cc-more .gfx-t{color:var(--accent);font-size:clamp(80px,9vw,120px);font-weight:300}
 .cc-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:18px}
-.cc-acts .btn{padding:10px 16px;font-size:15px}
 .cact{display:inline-flex;align-items:center;gap:4px;padding:8px 14px;border:1px solid var(--line-strong);border-radius:999px;color:var(--ink);font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap;transition:background .2s,color .2s,border-color .2s}
 .cact:hover{background:var(--fill);border-color:var(--fill);color:var(--on-fill)}
 .viewer{width:min(1100px,94vw);max-width:none;max-height:92vh;padding:0;border:1px solid var(--line-strong);border-radius:16px;background:var(--bg2);color:var(--ink);overflow:hidden}
@@ -689,3 +687,16 @@ html:not(.js) .cmp [data-o="sisr"]::before{content:"SISR · ";color:var(--mute)}
 .v-nav[hidden]{display:none}
 @media (max-width:620px){#v-dl{display:none}.v-nav{width:38px;height:38px;margin-top:-19px;font-size:24px}}
 .cc-score b{white-space:nowrap}
+
+.cc-media.li{gap:16px;text-decoration:none}
+.li-logo{display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:14px;background:var(--fill);color:var(--on-fill);font:800 34px/1 var(--display);letter-spacing:-.04em;transition:transform .4s var(--ease)}
+.cc:hover .li-logo{transform:rotate(-6deg) scale(1.06)}
+.li-txt b{display:block;font:800 clamp(24px,2.4vw,30px)/1 var(--display);letter-spacing:-.03em;color:var(--ink)}
+.li-txt small{display:block;margin-top:6px;font-size:15px;color:var(--sec)}
+.cact.main{background:var(--fill);border-color:var(--fill);color:var(--on-fill)}
+.cact.main:hover{background:var(--fill-hover);border-color:var(--fill-hover)}
+.cact svg{flex:none}
+.v-stage img{transition:opacity .25s}
+.v-stage img.ld{opacity:0}
+.viewer{transition:opacity .25s}
+.viewer.out{opacity:0}

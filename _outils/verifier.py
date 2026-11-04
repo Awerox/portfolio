@@ -75,6 +75,7 @@ def main():
             if lien.startswith(EXTERNES) or lien == "":
                 continue
             cible, _, ancre = lien.partition("#")
+            cible = cible.split("?")[0]   # ?v=… : numéro de version contre le cache du navigateur
             fichier = (p.parent / cible) if cible else p
             if not fichier.exists():
                 problemes.append("lien cassé : %s" % lien)

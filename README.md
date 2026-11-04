@@ -48,6 +48,8 @@ python3 _outils/verifier.py    # liens cassés, images sans alt, doublons, champ
 
 Ne pas modifier le menu à la main dans une page interne : la prochaine propagation l'écraserait.
 
+- **Cache du navigateur** : après une modification de `style.css` ou `main.js`, changer le numéro `?v=…` dans les pages (rechercher-remplacer `?v=20261104b` par une nouvelle valeur), sinon les visiteurs peuvent garder l'ancienne version.
+
 ## À garder à jour
 
 - Le CV et la période de stage de 2ᵉ année dès qu'un stage est trouvé (pages Stage et Accueil, en français et en anglais).
